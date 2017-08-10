@@ -1,3 +1,6 @@
+default_repos.txt
+output
+*.csv
 *.gem
 *.rbc
 /.config
