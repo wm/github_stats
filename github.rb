@@ -26,8 +26,8 @@ class GithubStats
 
   class Queries
     TagsQuery = GHAPI::Client.parse <<-'GRAPHQL'
-      query ($owner: String!, $name: String!, $first: Int!, $after: String){
-         rateLimit {
+      query ($owner: String!, $name: String!, $first: Int!, $after: String) {
+        rateLimit {
           limit
           cost
           remaining
@@ -44,6 +44,17 @@ class GithubStats
               node {
                 name
                 target {
+                  ... on Tag {
+                    target {
+                      ... on Commit {
+                        author {
+                          name
+                          email
+                          date
+                        }
+                      }
+                    }
+                  }
                   ... on Commit {
                     author {
                       name

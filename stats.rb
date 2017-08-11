@@ -34,8 +34,7 @@ class Stats
     repo_names.each do |name|
       github_stats.tags(owner: owner, repo_name: name).each do |tag|
         tag_name = "#{name}_#{tag['name']}"
-        author   = tag['target']['author']
-        next unless author
+        author   = tag['target']['author'] || tag['target']['target']['author']
         date     = parse_time author['date']
 
         yield [date[:year], date[:quarter], date[:month], date[:time], name, author['name'], tag_name]
