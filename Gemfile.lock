@@ -1,0 +1,34 @@
+GIT
+  remote: git@github.com:github/graphql-client.git
+  revision: fe13ce58293bfaa43227daee669f0b3b1644c1e6
+  tag: v0.12.3
+  specs:
+    graphql-client (0.12.3)
+      activesupport (>= 3.0, < 6.0)
+      graphql (~> 1.6)
+
+GEM
+  specs:
+    activesupport (5.0.2)
+      concurrent-ruby (~> 1.0, >= 1.0.2)
+      i18n (~> 0.7)
+      minitest (~> 5.1)
+      tzinfo (~> 1.1)
+    concurrent-ruby (1.0.5)
+    graphql (1.7.13)
+    i18n (0.9.5)
+      concurrent-ruby (~> 1.0)
+    minitest (5.11.3)
+    thread_safe (0.3.6)
+    tzinfo (1.2.5)
+      thread_safe (~> 0.1)
+
+PLATFORMS
+  ruby
+
+DEPENDENCIES
+  graphql
+  graphql-client!
+
+BUNDLED WITH
+   1.16.1
